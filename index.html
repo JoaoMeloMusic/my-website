@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>João's Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background-color: #444;
+        color: white;
+        padding: 0; /* Remove padding */
+        height: 300px; /* Set a fixed height for the header */
+        background-image: url("images/profile.jpg"); /* Set the image as the background */
+        background-size: cover; /* Make the background image cover the entire header */
+        background-position: center; /* Center the image */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      header h1 {
+        position: absolute;
+        color: white;
+        font-size: 4rem; /* Adjust font size */
+        text-align: center;
+        margin: 0;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      section {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #444;
+        color: white;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        header,
+        footer {
+          text-align: left;
+          padding: 1rem;
+        }
+
+        section {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Joao Melo</h1>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I’m a percussionist, coder, and philosopher passionate about connecting
+        music, technology, and philosophy.
+      </p>
+      <p>
+        Check out my works at my
+        <a href="https://youtube.com/@sendhabbo">Youtube channel</a> or connect
+        with me on <a href="https://linkedin.com/in/joaomelo1999">LinkedIn</a>.
+      </p>
+    </section>
+    <section>
+      <h2>Concerts</h2>
+      <div>
+        <h3>Concerts with Bard Percussion Ensemble</h3>
+        <a
+          href="https://youtube.com/live/WBnrEXu4PFg?si=tHnUl_T76QZAP5K0"
+          target="_blank"
+          >Fall 2024 Concert</a
+        >
+        <a
+          href="https://youtube.com/live/nxY0_cOInro?si=EdwkgtnuLOTkFQQt"
+          target="_blank"
+          >Spring 2024 Concert</a
+        >
+      </div>
+    </section>
+    <section>
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea
+        ><br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Joao - All rights reserved.</p>
+    </footer>
+  </body>
+</html>
