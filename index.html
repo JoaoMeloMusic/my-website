@@ -112,60 +112,136 @@
         margin: 0 auto;
         padding: 2rem;
       }
+
+      #language-switch {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      #language-switch button {
+        background: white;
+        border: none;
+        padding: 0.5rem 0.75rem;
+        margin-left: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      #language-switch button:hover {
+        background: #eee;
+      }
     </style>
     <script>
       if (window.location.hostname === "www.joaomelomusic.com") {
         window.location.href = "https://joaomelomusic.com";
       }
     </script>
+
+    <script>
+      function setLanguage(lang) {
+        document.querySelectorAll(".lang").forEach((el) => {
+          el.style.display = el.dataset.lang === lang ? "block" : "none";
+        });
+        localStorage.setItem("preferredLanguage", lang);
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("preferredLanguage");
+        const browserLang = navigator.language.startsWith("pt") ? "pt" : "en";
+        setLanguage(savedLang || browserLang);
+      });
+    </script>
   </head>
   <body>
     <header>
       <h1>Joao Melo</h1>
+      <div id="language-switch">
+        <button onclick="setLanguage('en')">🇺🇸</button>
+        <button onclick="setLanguage('pt')">🇧🇷</button>
+      </div>
     </header>
     <div class="container">
       <section>
-        <h2>About Me</h2>
+        <h2 class="lang" data-lang="en">About Me</h2>
+        <h2 class="lang" data-lang="pt" style="display: none">Sobre Mim</h2>
         <img
           src="images/profile2.jpeg"
           alt="Joao Melo headshot"
           class="profile-pic"
         />
-
-        <details open>
-          <summary><strong>Short Bio</strong> (Quick overview)</summary>
-          <p>
-            João Melo is a Brazilian percussionist and educator pursuing a
-            double major in Percussion Performance and Philosophy at Bard
-            College in New York. A first-generation college student from
-            Salvador, Bahia, João began his journey in the music and social
-            project NEOJIBA, where he developed a commitment to music as a tool
-            for empowerment and transformation.
-          </p>
-          <p>
-            At Bard, João performs in orchestras, chamber ensembles, and solo
-            concerts, teaches through mentorship programs, and works in event
-            production and audiovisual operations. He is known for mixing
-            classical repertoire with Afro-Brazilian traditions and has
-            organized collaborative projects such as rhythm workshops exploring
-            the spiritual and political roots of Ijexá and Samba Reggae.
-          </p>
-          <p>
-            In 2025, João was selected as a fellow of the OAcademy Orchestra
-            Institute, a program he has been participating in masterclasses,
-            orchestra studies, etc. His story is marked by persistence,
-            creativity, and community-centered vision.
-          </p>
-          <p>
-            His senior project at Bard connects philosophy, education, and
-            music, exploring the works of Hannah Arendt and Paulo Freire in
-            relation to Salvador’s percussion traditions. João is also
-            developing a community arts initiative that connects youth with
-            elders through rhythm and storytelling, aiming to promote peace and
-            intergenerational responsibility through art.
-          </p>
-        </details>
-
+        <div class="lang" data-lang="en">
+          <details open>
+            <summary><strong>Short Bio</strong> (Quick overview)</summary>
+            <p>
+              João Melo is a Brazilian percussionist and educator pursuing a
+              double major in Percussion Performance and Philosophy at Bard
+              College in New York. A first-generation college student from
+              Salvador, Bahia, João began his journey in the music and social
+              project NEOJIBA, where he developed a commitment to music as a
+              tool for empowerment and transformation.
+            </p>
+            <p>
+              At Bard, João performs in orchestras, chamber ensembles, and solo
+              concerts, teaches through mentorship programs, and works in event
+              production and audiovisual operations. He is known for mixing
+              classical repertoire with Afro-Brazilian traditions and has
+              organized collaborative projects such as rhythm workshops
+              exploring the spiritual and political roots of Ijexá and Samba
+              Reggae.
+            </p>
+            <p>
+              In 2025, João was selected as a fellow of the OAcademy Orchestra
+              Institute, a program he has been participating in masterclasses,
+              orchestra studies, etc. His story is marked by persistence,
+              creativity, and community-centered vision.
+            </p>
+            <p>
+              His senior project at Bard connects philosophy, education, and
+              music, exploring the works of Hannah Arendt and Paulo Freire in
+              relation to Salvador’s percussion traditions. João is also
+              developing a community arts initiative that connects youth with
+              elders through rhythm and storytelling, aiming to promote peace
+              and intergenerational responsibility through art.
+            </p>
+          </details>
+        </div>
+        <div class="lang" data-lang="pt" style="display: none">
+          <details open>
+            <summary><strong>Mini Bio</strong> (Visão geral)</summary>
+            <p>
+              João Melo é um percussionista e educador brasileiro que está
+              cursando dupla graduação em Performance de Percussão e Filosofia
+              no Bard College, em Nova York. Nascido em Salvador, Bahia, e o
+              primeiro da sua família a cursar o ensino superior, João iniciou
+              sua trajetória musical no projeto social NEOJIBA, onde descobriu o
+              poder transformador da música.
+            </p>
+            <p>
+              Atualmente, João atua em orquestras, música de câmara e
+              apresentações solo, além de lecionar em programas de mentoria e
+              trabalhar com produção de eventos e audiovisual. Ele é reconhecido
+              por unir o repertório clássico com as tradições afro-brasileiras,
+              e tem liderado oficinas sobre Ijexá e Samba Reggae, destacando
+              suas raízes espirituais e históricas.
+            </p>
+            <p>
+              Em 2025, João foi selecionado como bolsista do OAcademy Orchestra
+              Institute, um programa internacional de formação musical. Sua
+              trajetória é marcada por persistência, criatividade e uma visão de
+              mundo centrada na comunidade.
+            </p>
+            <p>
+              Seu projeto de conclusão no Bard investiga a educação e a vida
+              política a partir da filosofia de Hannah Arendt, em diálogo com o
+              pensamento de Paulo Freire e os saberes musicais de Salvador. Ele
+              também está desenvolvendo uma iniciativa comunitária que conecta
+              jovens e idosos por meio da percussão e da contação de histórias.
+            </p>
+          </details>
+        </div>
         <details>
           <summary><strong>Medium Bio</strong> (More context)</summary>
           <p>
