@@ -33,12 +33,14 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
       }
       
-      .header-content .subtitle {
-        margin-top: 0.5rem;
-        font-size: 1.2rem;
-        color: white;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-      }
+     .header-content .subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.6rem; /* Aumentado */
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Igual ao h1 */
+  text-align: center;
+}
       
       #language-switch {
         position: absolute;
