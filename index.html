@@ -2,158 +2,8 @@
 <html>
   <head>
     <title>João's Portfolio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        color: #333;
-      }
-
-      header {
-        background-color: #444;
-        color: white;
-        padding: 0; /* Remove padding */
-        height: 300px; /* Set a fixed height for the header */
-        background-image: url("images/profile.jpg"); /* Set the image as the background */
-        background-size: cover; /* Make the background image cover the entire header */
-        background-position: center; /* Center the image */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-
-      header h1 {
-        position: absolute;
-        color: white;
-        font-size: 4rem; /* Adjust font size */
-        text-align: center;
-        margin: 0;
-
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-      }
-
-      section {
-        padding: 2rem;
-        text-align: center;
-      }
-
-      footer {
-        background-color: #444;
-        color: white;
-        padding: 1rem;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-      }
-
-      a {
-        color: #007bff;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 1024px) {
-        header h1 {
-          font-size: 3rem;
-        }
-
-        .container {
-          padding: 1.5rem;
-        }
-
-        .profile-pic {
-          width: 140px;
-          height: 140px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        body {
-          font-size: 14px;
-        }
-
-        header h1 {
-          font-size: 2rem;
-        }
-
-        .container {
-          padding: 1rem;
-        }
-
-        .profile-pic {
-          width: 120px;
-          height: 120px;
-        }
-
-        section {
-          padding: 1rem 0;
-        }
-      }
-
-      .profile-pic {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid white;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        margin: 1rem auto;
-        display: block;
-      }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-
-      #language-switch {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-
-      #language-switch button {
-        background: white;
-        border: none;
-        padding: 0.5rem 0.75rem;
-        margin-left: 0.5rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: bold;
-      }
-
-      #language-switch button:hover {
-        background: #eee;
-      }
-    </style>
-    <script>
-      if (window.location.hostname === "www.joaomelomusic.com") {
-        window.location.href = "https://joaomelomusic.com";
-      }
-    </script>
-
-    <script>
-      function setLanguage(lang) {
-        document.querySelectorAll(".lang").forEach((el) => {
-          el.style.display = el.dataset.lang === lang ? "block" : "none";
-        });
-        localStorage.setItem("preferredLanguage", lang);
-      }
-
-      window.addEventListener("DOMContentLoaded", () => {
-        const savedLang = localStorage.getItem("preferredLanguage");
-        const browserLang = navigator.language.startsWith("pt") ? "pt" : "en";
-        setLanguage(savedLang || browserLang);
-      });
-    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -242,187 +92,394 @@
             </p>
           </details>
         </div>
-        <details>
-          <summary><strong>Medium Bio</strong> (More context)</summary>
-          <p>
-            João Melo is a Brazilian percussionist, educator, and student at
-            Bard College in New York, where he is pursuing a double major in
-            Percussion Performance and Philosophy. A first-generation college
-            student, João came to the U.S. on a full scholarship after his
-            musical journey began in the social program NEOJIBA in Salvador,
-            Bahia. There, he was exposed to the transformative power of music in
-            community contexts, especially within Afro-Brazilian traditions.
-          </p>
-          <p>
-            At Bard, João has distinguished himself as both a performer and a
-            leader. He plays regularly with the Bard Conservatory Orchestra and
-            Bard Percussion Ensemble, mentors young musicians through the
-            Musical Mentorship Initiative, and works across departments in
-            audiovisual support and stage production. These roles have helped
-            his ability to move between technical precision and creative
-            intuition.
-          </p>
-          <p>
-            João is passionate about connecting academic study with lived
-            experience. His senior project at Bard brings together Hannah
-            Arendt’s ideas on education with Paulo Freire’s pedagogy and
-            Afro-Brazilian musical practices. He is especially interested in the
-            social, spiritual, and political meaning of Brazilian rhythms, like
-            Ijexá and Samba Reggae, which he has presented in educational
-            workshops that highlight the role in Black cultural resistance.
-          </p>
-          <p>
-            In 2025, João was accepted into the OAcademy Orchestra Institute, a
-            prestigious international training program that improved his global
-            network and solidified his artistic voice.
-          </p>
-          <p>
-            João is currently working on a community arts project in Salvador,
-            aimed at bringing together youth and elders through percussion,
-            visual art, and collective storytelling. His dream is to create
-            spaces where art becomes a path toward responsibility, identity, and
-            healing.
-          </p>
-        </details>
+        <div class="lang" data-lang="en">
+          <details open>
+            <summary><strong>Medium Bio</strong> (More context)</summary>
+            <p>
+              João Melo is a Brazilian percussionist, educator, and student at
+              Bard College in New York, where he is pursuing a double major in
+              Percussion Performance and Philosophy. A first-generation college
+              student, João came to the U.S. on a full scholarship after his
+              musical journey began in the social program NEOJIBA in Salvador,
+              Bahia. There, he was exposed to the transformative power of music
+              in community contexts, especially within Afro-Brazilian
+              traditions.
+            </p>
+            <p>
+              At Bard, João has distinguished himself as both a performer and a
+              leader. He plays regularly with the Bard Conservatory Orchestra
+              and Bard Percussion Ensemble, mentors young musicians through the
+              Musical Mentorship Initiative, and works across departments in
+              audiovisual support and stage production. These roles have helped
+              his ability to move between technical precision and creative
+              intuition.
+            </p>
+            <p>
+              João is passionate about connecting academic study with lived
+              experience. His senior project at Bard brings together Hannah
+              Arendt’s ideas on education with Paulo Freire’s pedagogy and
+              Afro-Brazilian musical practices. He is especially interested in
+              the social, spiritual, and political meaning of Brazilian rhythms,
+              like Ijexá and Samba Reggae, which he has presented in educational
+              workshops that highlight the role in Black cultural resistance.
+            </p>
+            <p>
+              In 2025, João was accepted into the OAcademy Orchestra Institute,
+              a prestigious international training program that improved his
+              global network and solidified his artistic voice.
+            </p>
+            <p>
+              João is currently working on a community arts project in Salvador,
+              aimed at bringing together youth and elders through percussion,
+              visual art, and collective storytelling. His dream is to create
+              spaces where art becomes a path toward responsibility, identity,
+              and healing.
+            </p>
+          </details>
+        </div>
 
-        <details>
-          <summary><strong>Full Bio</strong> (Complete version)</summary>
+        <div class="lang" data-lang="pt" style="display: none">
+          <details open>
+            <summary><strong>Média Bio</strong> (Mais contexto)</summary>
+            <p>
+              João Melo é um percussionista, educador e estudante no Bard
+              College, em Nova York, onde cursa dupla graduação em Performance
+              de Percussão e Filosofia. Primeira geração da sua família a
+              ingressar no ensino superior, João chegou aos Estados Unidos com
+              bolsa integral após iniciar sua trajetória musical no projeto
+              social NEOJIBA, em Salvador, Bahia. Lá, ele descobriu o poder
+              transformador da música em contextos comunitários, especialmente
+              dentro das tradições afro-brasileiras.
+            </p>
+            <p>
+              No Bard, João se destacou como performer e líder. Atua
+              regularmente com a Bard Conservatory Orchestra e com o Bard
+              Percussion Ensemble, mentora jovens músicos através da Musical
+              Mentorship Initiative, e trabalha em departamentos de suporte
+              audiovisual e produção de palco. Essas funções ampliaram sua
+              capacidade de transitar entre a precisão técnica e a intuição
+              criativa.
+            </p>
+            <p>
+              João é apaixonado por conectar estudo acadêmico com experiência
+              vivida. Seu projeto final no Bard une as ideias de Hannah Arendt
+              sobre educação com a pedagogia de Paulo Freire e práticas musicais
+              afro-brasileiras. Ele tem especial interesse no significado
+              social, espiritual e político de ritmos brasileiros como Ijexá e
+              Samba Reggae, que tem apresentado em oficinas educativas
+              destacando o papel desses ritmos na resistência cultural negra.
+            </p>
+            <p>
+              Em 2025, João foi aceito no OAcademy Orchestra Institute, um
+              prestigiado programa internacional de formação que ampliou sua
+              rede global e consolidou sua voz artística.
+            </p>
+            <p>
+              Atualmente, João desenvolve um projeto comunitário em Salvador,
+              que busca aproximar jovens e idosos através da percussão, arte
+              visual e narrativas coletivas. Seu sonho é criar espaços onde a
+              arte seja um caminho para responsabilidade, identidade e cura.
+            </p>
+          </details>
+        </div>
+        <div class="lang" data-lang="en">
+          <details open>
+            <summary><strong>Full Bio</strong> (Complete version)</summary>
+            <p>
+              João Melo is a Brazilian percussionist, educator, and
+              interdisciplinary thinker currently pursuing a double major in
+              Percussion Performance and Philosophy at Bard College in New York.
+              As a first-generation international student on a full scholarship,
+              João’s work lies at the connection of music, community
+              empowerment, and reflective inquiry.
+            </p>
+            <p>
+              He began his musical journey in Salvador, Bahia, through the
+              social project NEOJIBA, where he first experienced how music could
+              serve as a powerful tool for social transformation. His early
+              exposure to Afro-Brazilian rhythms, community-based music
+              education, and ensemble work gave him a deep commitment to equity,
+              education, and artistic excellence. João’s style connects
+              classical training with the communal traditions of Afro-Brazilian
+              music.
+            </p>
+            <p>
+              At Bard, João has cultivated a diverse profile: he performs as an
+              orchestral and chamber musician, teaches through mentorship
+              programs, and works behind the scenes in stage management and
+              audio-visual operations. He has also taken initiative as a
+              cultural connector, organizing collaborative projects such as
+              delivering educational workshops on Brazilian rhythms like Ijexá
+              and Samba Reggae, highlighting their historical and political
+              contexts.
+            </p>
+            <p>
+              In 2025, João was selected as a fellow of the OAcademy Orchestra
+              Institute, marking a full-circle moment since being rejected from
+              the program in 2019, a setback that indirectly led to his
+              acceptance at Bard through a partner organization. His journey
+              reflects resilience and a commitment to growth, transformation,
+              and building connections across disciplines and cultures.
+            </p>
+            <p>
+              João’s senior project at Bard explores Hannah Arendt's
+              philosophical insights on education and political life with
+              Brazilian thinkers like Paulo Freire and the cultural knowledge of
+              Salvador’s percussion traditions. His vision is to use art not as
+              a product, but as a process for healing, collective
+              responsibility, and liberation.
+            </p>
+            <p>
+              Outside of performance and academia, João is invested in creating
+              meaningful connections, whether through cooking meals with
+              friends, mentoring younger students, or using social media as a
+              platform to share his journey authentically. He is currently
+              developing a community-based arts initiative in Salvador aimed at
+              reconnecting youth and elders through percussion, storytelling,
+              and sculpture
+            </p>
+            <p>
+              Fluent in English and Portuguese, João continues to challenge the
+              boundaries of what it means to be an artist in the 21st century.
+              He dreams of a future where his music not only moves audiences but
+              moves communities toward justice and self-knowledge.
+            </p>
+          </details>
+        </div>
+        <div class="lang" data-lang="pt" style="display: none">
+          <details open>
+            <summary>
+              <strong>Biografia Completa</strong> (Versão completa)
+            </summary>
+            <p>
+              João Melo é um percussionista, educador e pensador
+              interdisciplinar brasileiro que atualmente cursa dupla graduação
+              em Performance de Percussão e Filosofia no Bard College, em Nova
+              York. Como estudante internacional de primeira geração com bolsa
+              integral, o trabalho de João se dá na interseção entre música,
+              empoderamento comunitário e reflexão crítica.
+            </p>
+            <p>
+              Ele iniciou sua trajetória musical em Salvador, Bahia, através do
+              projeto social NEOJIBA, onde descobriu como a música pode ser uma
+              poderosa ferramenta de transformação social. Sua exposição precoce
+              aos ritmos afro-brasileiros, à educação musical comunitária e ao
+              trabalho em conjunto lhe deram um forte compromisso com a
+              equidade, a educação e a excelência artística. O estilo de João
+              conecta a formação clássica às tradições comunitárias da música
+              afro-brasileira.
+            </p>
+            <p>
+              No Bard, João construiu um perfil diverso: atua como músico de
+              orquestra e música de câmara, ensina em programas de mentoria e
+              trabalha nos bastidores em gestão de palco e operações
+              audiovisuais. Ele também atua como conector cultural, organizando
+              projetos colaborativos como oficinas sobre ritmos brasileiros como
+              Ijexá e Samba Reggae, destacando seus contextos históricos e
+              políticos.
+            </p>
+            <p>
+              Em 2025, João foi selecionado como bolsista do OAcademy Orchestra
+              Institute, marcando um momento de virada em sua trajetória após
+              ter sido rejeitado pelo mesmo programa em 2019, uma decepção que
+              acabou o levando, indiretamente, à sua aceitação no Bard através
+              de uma organização parceira. Sua jornada reflete resiliência,
+              compromisso com o crescimento, transformação e construção de
+              conexões entre disciplinas e culturas.
+            </p>
+            <p>
+              Seu projeto de conclusão no Bard explora os insights filosóficos
+              de Hannah Arendt sobre educação e vida política, dialogando com
+              pensadores brasileiros como Paulo Freire e com os saberes
+              culturais das tradições percussivas de Salvador. Sua visão é
+              utilizar a arte não como produto, mas como processo de cura,
+              responsabilidade coletiva e libertação.
+            </p>
+            <p>
+              Fora dos palcos e da academia, João se dedica a criar conexões
+              significativas, seja cozinhando para amigos, mentorando jovens
+              músicos ou utilizando as redes sociais como plataforma para
+              compartilhar sua trajetória de maneira autêntica. Atualmente, ele
+              desenvolve uma iniciativa comunitária baseada em Salvador que
+              busca reconectar jovens e idosos através da percussão, da contação
+              de histórias e da escultura.
+            </p>
+            <p>
+              Fluente em inglês e português, João continua desafiando os limites
+              do que significa ser artista no século XXI. Ele sonha com um
+              futuro onde sua música não apenas emocione plateias, mas mova
+              comunidades em direção à justiça e ao autoconhecimento.
+            </p>
+          </details>
+        </div>
+        <div class="lang" data-lang="en">
           <p>
-            João Melo is a Brazilian percussionist, educator, and
-            interdisciplinary thinker currently pursuing a double major in
-            Percussion Performance and Philosophy at Bard College in New York.
-            As a first-generation international student on a full scholarship,
-            João’s work lies at the connection of music, community empowerment,
-            and reflective inquiry.
+            Check out my work on
+            <a
+              href="https://youtube.com/@sendhabbo"
+              target="_blank"
+              rel="noopener noreferrer"
+              >YouTube</a
+            >
+            or connect with me on
+            <a href="https://linkedin.com/in/joaomelo1999" target="_blank"
+              >LinkedIn</a
+            >.
           </p>
-          <p>
-            He began his musical journey in Salvador, Bahia, through the social
-            project NEOJIBA, where he first experienced how music could serve as
-            a powerful tool for social transformation. His early exposure to
-            Afro-Brazilian rhythms, community-based music education, and
-            ensemble work gave him a deep commitment to equity, education, and
-            artistic excellence. João’s style connects classical training with
-            the communal traditions of Afro-Brazilian music.
-          </p>
-          <p>
-            At Bard, João has cultivated a diverse profile: he performs as an
-            orchestral and chamber musician, teaches through mentorship
-            programs, and works behind the scenes in stage management and
-            audio-visual operations. He has also taken initiative as a cultural
-            connector, organizing collaborative projects such as delivering
-            educational workshops on Brazilian rhythms like Ijexá and Samba
-            Reggae, highlighting their historical and political contexts.
-          </p>
-          <p>
-            In 2025, João was selected as a fellow of the OAcademy Orchestra
-            Institute, marking a full-circle moment since being rejected from
-            the program in 2019, a setback that indirectly led to his acceptance
-            at Bard through a partner organization. His journey reflects
-            resilience and a commitment to growth, transformation, and building
-            connections across disciplines and cultures.
-          </p>
-          <p>
-            João’s senior project at Bard explores Hannah Arendt's philosophical
-            insights on education and political life with Brazilian thinkers
-            like Paulo Freire and the cultural knowledge of Salvador’s
-            percussion traditions. His vision is to use art not as a product,
-            but as a process for healing, collective responsibility, and
-            liberation.
-          </p>
-          <p>
-            Outside of performance and academia, João is invested in creating
-            meaningful connections, whether through cooking meals with friends,
-            mentoring younger students, or using social media as a platform to
-            share his journey authentically. He is currently developing a
-            community-based arts initiative in Salvador aimed at reconnecting
-            youth and elders through percussion, storytelling, and sculpture
-          </p>
-          <p>
-            Fluent in English and Portuguese, João continues to challenge the
-            boundaries of what it means to be an artist in the 21st century. He
-            dreams of a future where his music not only moves audiences but
-            moves communities toward justice and self-knowledge.
-          </p>
-        </details>
+        </div>
 
-        <p>
-          Check out my work on
-          <a
-            href="https://youtube.com/@sendhabbo"
-            target="_blank"
-            rel="noopener noreferrer"
-            >YouTube</a
-          >
-          or connect with me on
-          <a href="https://linkedin.com/in/joaomelo1999" target="_blank"
-            >LinkedIn</a
-          >.
-        </p>
-      </section>
-
-      <section>
-        <h2>Concerts</h2>
-        <div>
-          <h3>Concerts with Bard Percussion Ensemble</h3>
-          <a
-            href="https://youtube.com/live/WBnrEXu4PFg?si=tHnUl_T76QZAP5K0"
-            target="_blank"
-            >Fall 2024 Concert</a
-          >
-          <a
-            href="https://youtube.com/live/nxY0_cOInro?si=EdwkgtnuLOTkFQQt"
-            target="_blank"
-            >Spring 2024 Concert</a
-          >
+        <div class="lang" data-lang="pt" style="display: none">
+          <p>
+            Conheça meu trabalho no
+            <a
+              href="https://youtube.com/@sendhabbo"
+              target="_blank"
+              rel="noopener noreferrer"
+              >YouTube</a
+            >
+            ou conecte-se comigo no
+            <a href="https://linkedin.com/in/joaomelo1999" target="_blank"
+              >LinkedIn</a
+            >.
+          </p>
         </div>
       </section>
+
       <section>
-        <h2>Contact Me</h2>
-        <form
-          action="https://formsubmit.co/joaovictorsmelo@gmail.com"
-          method="POST"
-        >
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://joaomelomusic.com/thanks.html"
-          />
-          <input type="text" name="_honey" style="display: none" />
-          <label for="name">Name:</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name"
-            required
-          /><br /><br />
+        <div class="lang" data-lang="en">
+          <h2>Concerts</h2>
+          <div>
+            <h3>Concerts with Bard Percussion Ensemble</h3>
+            <a
+              href="https://youtube.com/live/WBnrEXu4PFg?si=tHnUl_T76QZAP5K0"
+              target="_blank"
+              >Fall 2024 Concert</a
+            >
+            <a
+              href="https://youtube.com/live/nxY0_cOInro?si=EdwkgtnuLOTkFQQt"
+              target="_blank"
+              >Spring 2024 Concert</a
+            >
+          </div>
+        </div>
 
-          <label for="email">Email:</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          /><br /><br />
+        <div class="lang" data-lang="pt" style="display: none">
+          <h2>Concertos</h2>
+          <div>
+            <h3>Concertos com o Bard Percussion Ensemble</h3>
+            <a
+              href="https://youtube.com/live/WBnrEXu4PFg?si=tHnUl_T76QZAP5K0"
+              target="_blank"
+              >Concerto de Outono 2024</a
+            >
+            <a
+              href="https://youtube.com/live/nxY0_cOInro?si=EdwkgtnuLOTkFQQt"
+              target="_blank"
+              >Concerto de Primavera 2024</a
+            >
+          </div>
+        </div>
+      </section>
 
-          <label for="message">Message:</label><br />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your Message"
-            rows="5"
-            required
-          ></textarea
-          ><br /><br />
+      <section>
+        <div class="lang" data-lang="en">
+          <h2>Contact Me</h2>
+          <form
+            action="https://formsubmit.co/joaovictorsmelo@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://joaomelomusic.com/thanks.html"
+            />
+            <input type="text" name="_honey" style="display: none" />
+            <label for="name">Name:</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            /><br /><br />
 
-          <button type="submit">Send</button>
-        </form>
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            /><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea
+            ><br /><br />
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="lang" data-lang="pt" style="display: none">
+          <h2>Fale Comigo</h2>
+          <form
+            action="https://formsubmit.co/joaovictorsmelo@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://joaomelomusic.com/thanks.html"
+            />
+            <input type="text" name="_honey" style="display: none" />
+            <label for="name">Nome:</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Seu Nome"
+              required
+            /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Seu Email"
+              required
+            /><br /><br />
+
+            <label for="message">Mensagem:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Sua Mensagem"
+              rows="5"
+              required
+            ></textarea
+            ><br /><br />
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
       </section>
     </div>
     <footer>
-      <p>&copy; 2025 Joao - All rights reserved.</p>
+      <div class="lang" data-lang="en">
+        <p>&copy; 2025 Joao - All rights reserved.</p>
+      </div>
+      <div class="lang" data-lang="pt" style="display: none">
+        <p>&copy; 2025 Joao - Todos os direitos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>
