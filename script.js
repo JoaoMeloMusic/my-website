@@ -1,3 +1,4 @@
+
 if (window.location.hostname === "www.joaomelomusic.com") {
     window.location.href = "https://joaomelomusic.com";
 }
