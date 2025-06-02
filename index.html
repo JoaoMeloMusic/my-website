@@ -14,6 +14,12 @@
       <button onclick="chooseLanguage('en')">English 🇺🇸</button>
       <button onclick="chooseLanguage('pt')">Português 🇧🇷</button>
     </div>
+    <!-- <nav class="side-nav">
+      <a href="#about">Sobre Mim</a>
+      <a href="#concerts">Concertos</a>
+      <a href="#contact">Contato</a>
+    </nav> -->
+
     <header>
       <div class="header-content">
         <h1>Joao Melo</h1>
@@ -29,8 +35,15 @@
         <button onclick="setLanguage('pt')">🇧🇷</button>
       </div>
     </header>
+
+    <nav class="navbar">
+      <a href="#about">About</a>
+      <a href="#concerts">Concerts</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
-      <section>
+      <section id="about">
         <h2 class="lang" data-lang="en">About Me</h2>
         <h2 class="lang" data-lang="pt" style="display: none">Sobre Mim</h2>
         <img
@@ -377,7 +390,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="concerts">
         <div class="lang" data-lang="en">
           <h2>Concerts</h2>
           <details>
@@ -479,7 +492,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="contact">
         <div class="lang" data-lang="en">
           <h2>Contact Me</h2>
           <form
