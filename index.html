@@ -18,7 +18,7 @@
     <header class="hero-header">
       <img src="images/profile.jpg" alt="Joao Melo" class="hero-image" />
       <div class="hero-text">
-        <h1>Joao Melo</h1>
+        <h1>João Melo</h1>
         <p class="subtitle lang" data-lang="en">
           Percussionist • Educator • Philosopher
         </p>
@@ -33,11 +33,20 @@
     </header>
 
     <nav class="navbar">
-      <ul class="nav-tabs">
-        <a href="#about">About</a>
-        <a href="#concerts">Concerts</a>
-        <a href="#contact">Contact</a>
-      </ul>
+      <!-- <ul class="nav-tabs">-->
+      <a href="#about">
+        <span class="lang" data-lang="en">About</span>
+        <span class="lang" data-lang="pt" style="display: none">Sobre Mim</span>
+      </a>
+      <a href="#concerts">
+        <span class="lang" data-lang="en">Concerts</span>
+        <span class="lang" data-lang="pt" style="display: none">Concertos</span>
+      </a>
+      <a href="#contact">
+        <span class="lang" data-lang="en">Contact</span>
+        <span class="lang" data-lang="pt" style="display: none">Contato</span>
+      </a>
+      <!-- </ul>-->
       <div id="language-switch">
         <button onclick="setLanguage('en')">🇺🇸</button>
         <button onclick="setLanguage('pt')">🇧🇷</button>
